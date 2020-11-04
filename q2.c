@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int main(int argc **argv){
+int main(int argc, char **argv){
 
 	int pid; //process ID
 
