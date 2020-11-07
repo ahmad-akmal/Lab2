@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <sys/wait.h>
 
 int main(int argc, char **argv){
 
@@ -13,6 +14,7 @@ int main(int argc, char **argv){
 	        break;
 
 	default: //a fork returns a pid to the parent
+		wait(NULL);
 		printf("I am the parent process: pid=%d, child pid=%d\n", getpid(), pid);
 		break;
 
